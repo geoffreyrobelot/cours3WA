@@ -1,5 +1,4 @@
 import React from 'react';
-import Typed from 'react-typed';
 
 function About() {
     return (

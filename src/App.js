@@ -9,11 +9,11 @@ import Formations from './components/Formations.js';
 import Contact from './components/Contact.js';
 import React from 'react';
 import ScrollToTop from "react-scroll-to-top";
-import State from './components/Contact';
+
 // import du routeur --> HashRouter
 // import de Route --> itinéraire vers 
 // import de Link --> composant qui génère une balise <a href="..."
-import {HashRouter, Route, Link, BrowserRouter, Switch} from 'react-router-dom';
+import {Route, BrowserRouter, Switch} from 'react-router-dom';
 
 
 // Composant principal de l'application 

@@ -28,13 +28,13 @@ nav a.nav-link{
 
 nav ul li {
   text-transform: uppercase;
-  margin-left: 50px;
+  margin-left: 25px;
   font-size: 20px;
 }
 
 .navbar-nav > li > a{
-  margin-right: 50px;
-  margin-left: 50px;
+  margin-right: 25px;
+  margin-left: 25px;
   color: var(--primary-white) !important;
 }
 
@@ -209,8 +209,6 @@ a:hover{
   align-items: center;  
   width: auto;
 }
-
-
 
 .content-contact label{
   padding-top: 5px;

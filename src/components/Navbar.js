@@ -1,12 +1,7 @@
 import React from 'react'
 import logo from '../geo1.png';
-import {BrowserRouter, HashRouter, Route, Switch} from 'react-router-dom';
 import {Link} from 'react-scroll';
-import About from './About.js';
-import Home from './Home.js';
-import Header from './Header.js';
-import Formations from './Formations.js';
-import Contact from './Contact.js';
+
 
 
 const Navbar = () => {
@@ -14,7 +9,7 @@ const Navbar = () => {
     
       <nav className="navbar navbar-expand-lg navbar-light bg-dark">
         <div className="container">
-          <a className="navbar-brand" href="#"><img className="logo" src={logo} alt="logo" /></a>
+          <a className="navbar-brand" href="/#"><img className="logo" src={logo} alt="logo" /></a>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -23,10 +18,10 @@ const Navbar = () => {
             <ul className="navbar-nav ml-auto">
 
               <li className="nav-item active">
-                <li><Link to={"/"} className="nav-link">Accueil</Link></li>
+                <li><Link to={"/#"} className="nav-link">Accueil</Link></li>
               </li>
               <li className="nav-item">
-                <li><Link to="about" className="nav-link" smooth={true} duration={1000}>A propos</Link></li>
+                <li><Link to="about" className="nav-link" smooth={true} duration={1000}>Propos</Link></li>
               </li>
               <li className="nav-item">
                 <li><Link to="formations" className="nav-link" smooth={true} duration={1000}>Formations</Link></li>
@@ -39,9 +34,9 @@ const Navbar = () => {
         </div>
         <div className="reseau">
           <ul>
-            <li><a href="https://www.facebook.com/geoffrey.robelot" target="_blank"><i className="fab fa-facebook-square"></i></a></li>
-            <li><a href="https://www.linkedin.com/in/geoffrey-robelot-a491b21b7/" target="_blank"><i className="fab fa-linkedin"></i></a></li>
-            <li><a href="https://www.instagram.com/geoffrey_robelot/?hl=fr" target="_blank"><i className="fab fa-instagram-square"></i></a></li>
+            <li><a href="https://www.facebook.com/geoffrey.robelot" target="_blank" rel="noreferrer"><i className="fab fa-facebook-square"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/geoffrey-robelot-a491b21b7/" target="_blank" rel="noreferrer"><i className="fab fa-linkedin"></i></a></li>
+            <li><a href="https://www.instagram.com/geoffrey_robelot/?hl=fr" target="_blank" rel="noreferrer"><i className="fab fa-instagram-square"></i></a></li>
           </ul>
         </div>
       </nav>
