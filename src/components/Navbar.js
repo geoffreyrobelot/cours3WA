@@ -23,16 +23,16 @@ const Navbar = () => {
             <ul className="navbar-nav ml-auto">
 
               <li className="nav-item active">
-                <li><Link to={"/"} className="nav-link">Home</Link> </li>
+                <li><Link to={"/"} className="nav-link">Accueil</Link></li>
               </li>
               <li className="nav-item">
-                <li><Link to="about" className="nav-link" smooth={true} duration={1000}>About</Link> </li>
+                <li><Link to="about" className="nav-link" smooth={true} duration={1000}>A propos</Link></li>
               </li>
               <li className="nav-item">
-                <li><Link to="formations" className="nav-link" smooth={true} duration={1000}>Formations</Link> </li>
+                <li><Link to="formations" className="nav-link" smooth={true} duration={1000}>Formations</Link></li>
               </li>
               <li className="nav-item">
-              <li><Link to="contact" className="nav-link" smooth={true} duration={1000}>Contact </Link> </li>
+              <li><Link to="contact" className="nav-link" smooth={true} duration={1000}>Contact</Link></li>
               </li>
             </ul>
           </div>
