@@ -37,8 +37,14 @@ class Contact extends React.Component {
             motif: this.state.motif
         }
         event.preventDefault();
+        /*
+        * Fonctionnalité qui permet de vérifier l'expression mail 
+        * Pas d'action pour le moment 
+        */ 
         if (!this.state.email.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`/\{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)){
+            // Affiche lorsque le mail entré n'est pas valide dans la console 
             console.log("le mail n'est pas valide");
+            // Affiche sur la page une alerte 
             alert("Le mail saisi n'est pas valide");
         } 
         // Affiche les valeurs du formulaire dans la console    
