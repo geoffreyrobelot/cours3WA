@@ -1,14 +1,17 @@
 import React from 'react'
-import logo from '../geo.png';
-import {BrowserRouter, HashRouter, Route, Link, Switch} from 'react-router-dom';
+import logo from '../geo1.png';
+import {BrowserRouter, HashRouter, Route, Switch} from 'react-router-dom';
+import {Link} from 'react-scroll';
 import About from './About.js';
 import Home from './Home.js';
+import Header from './Header.js';
 import Formations from './Formations.js';
 import Contact from './Contact.js';
 
+
 const Navbar = () => {
   return (
-    <BrowserRouter>
+    
       <nav className="navbar navbar-expand-lg navbar-light bg-dark">
         <div className="container">
           <a className="navbar-brand" href="#"><img className="logo" src={logo} alt="logo" /></a>
@@ -16,36 +19,36 @@ const Navbar = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
 
-
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav mr-auto">
-
+            <ul className="navbar-nav ml-auto">
 
               <li className="nav-item active">
                 <li><Link to={"/"} className="nav-link">Home</Link> </li>
               </li>
               <li className="nav-item">
-                <li><Link to={"/about"} className="nav-link">About</Link> </li>
+                <li><Link to="about" className="nav-link" smooth={true} duration={1000}>About</Link> </li>
               </li>
               <li className="nav-item">
-                <li><Link to={"/formations"} className="nav-link">Formations</Link></li>
+                <li><Link to="formations" className="nav-link" smooth={true} duration={1000}>Formations</Link> </li>
               </li>
               <li className="nav-item">
-                <li><Link to={"/contact"} className="nav-link">Contact</Link></li>
+              <li><Link to="contact" className="nav-link" smooth={true} duration={1000}>Contact </Link> </li>
               </li>
             </ul>
           </div>
         </div>
+        <div className="reseau">
+          <ul>
+            <li><a href="https://www.facebook.com/geoffrey.robelot" target="_blank"><i className="fab fa-facebook-square"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/geoffrey-robelot-a491b21b7/" target="_blank"><i className="fab fa-linkedin"></i></a></li>
+            <li><a href="https://www.instagram.com/geoffrey_robelot/?hl=fr" target="_blank"><i className="fab fa-instagram-square"></i></a></li>
+          </ul>
+        </div>
       </nav>
 
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/about" component={About} />
-        <Route path="/formations" component={Formations} />
-        <Route path="/contact" component={Contact} />
-      </Switch>
+      
 
-    </BrowserRouter>
+    
 
   )
 }

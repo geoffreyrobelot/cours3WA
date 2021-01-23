@@ -1,24 +1,25 @@
 import './App.css';
+import Home from './components/Home';
 import Navbar from './components/Navbar.js';
 import Header from './components/Header.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Particles from 'react-particles-js';
-import Home from './components/Home.js';
 import About from './components/About.js';
 import Formations from './components/Formations.js';
 import Contact from './components/Contact.js';
 import React from 'react';
+import ScrollToTop from "react-scroll-to-top";
 // import du routeur --> HashRouter
 // import de Route --> itinéraire vers 
 // import de Link --> composant qui génère une balise <a href="..."
-import {HashRouter, Route, Link} from 'react-router-dom';
+import {HashRouter, Route, Link, BrowserRouter, Switch} from 'react-router-dom';
 
 
 // Composant principal de l'application 
 function App() {
   return (
     <>
-
+    <BrowserRouter>
       <Navbar/>
       <Particles
         params={{
@@ -46,10 +47,23 @@ function App() {
           }
         }} />
       
-      <Header />
+      <ScrollToTop smooth />
+
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/about" component={About} />
+        <Route path="/formations" component={Formations} />
+        <Route path="/contact" component={Contact} />
+      </Switch>
+
+      <Header/>
+      <About/>
+      <Formations/>
+      <Contact/>
+
+      </BrowserRouter>
     </>
   )
 }
-
 
 export default App;

@@ -5,21 +5,31 @@ function Header() {
     return (
         <div className="header-wraper">
             <div className="main-info">
-                <h1>Portfolio Geoffrey R.</h1>
+                <h2>Geoffrey ROBELOT</h2>
 
                 <Typed
                     className="typed-text"
-                    strings={["Développeur Web", "Développeur d'Applications"]}
-                    typeSpeed={60}
-                    backSpeed={70}
-                    loop
+                    strings={["Développeur Web"]}
+                    typeSpeed={50}
+                /* backSpeed={150} */
+
+
+                />
+
+                <Typed
+                    className="typed-text-2"
+                    strings={["En alternance 2021 - 2022"]}
+                    typeSpeed={80}
+                /* backSpeed={50} */
+
                 />
 
             </div>
 
             <div className="header-content">
-                <h2>Bienvenue</h2>
             </div>
+
+
 
         </div>
     )

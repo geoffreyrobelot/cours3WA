@@ -2,15 +2,19 @@
   --primary-white: #fff;
 }
 
+
+
 nav {
   z-index: 2;
+  opacity: 1;
 }
 
 /********* Style Navbar *******/ 
 
 .logo{
-  width: 300px;
-  height: 120px;
+  width: 200px;
+  height: 150px;
+  padding-left: 50px;
 }
 
 
@@ -18,13 +22,13 @@ nav {
 
 nav a.nav-link{
   font-weight: 500;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.7px;
   cursor: pointer;
 }
 
 nav ul li {
   text-transform: uppercase;
-  margin-left: 20px;
+  margin-left: 50px;
   font-size: 20px;
 }
 
@@ -34,18 +38,58 @@ nav ul li {
   color: var(--primary-white) !important;
 }
 
+a:hover{
+  background-color:grey;
+}
+
 .nav-link{
   color: var(--primary-white) !important;
+}
+
+/******* liste reseaux sociaux ******/
+
+.reseau ul{
+  display: flex;
+  text-align: center;
+  position: relative;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.reseau ul li {
+  list-style: none;
+  margin: 10px;
+}
+
+.reseau ul li a {
+  width: 50px;
+  height: 40px;
+  display: inline-block;
+  color: white;
+  font-size: 25px;
+}
+
+
+.reseau ul li:nth-child(1){
+  background: blue;
+}
+.reseau ul li:nth-child(2){
+  background: #0077B5;
+}
+.reseau ul li:nth-child(3){
+  background: #e4405f;
 }
 
 /************* Header **********/ 
 
 .header-wraper{
   position: relative;
-  background: url("fond.png") no-repeat;
+  background: url("fond1.png") no-repeat;
   background-size: cover;
   background-position: center;
-  height: 90vh;
+  height: 100vh;
 }
 
 .main-info{
@@ -61,12 +105,66 @@ nav ul li {
   text-align: center;
 }
 
-.main-info h1{
-  color:black;
-  text-transform: uppercase;
+.main-info h2{
+  color:brown;
   margin-top: 150px;
+  font-size: 40px;
 }
 
+.main-info .typed-text{
+  color: var(--primary-white);
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 20px;
+  font-size: 70px;
+}
+
+.main-info .typed-text-2{
+  color: var(--primary-white);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 50px;
+  margin-top: 20px;
+}
+
+
+/********** Page about *********/
+
+.main-info-about h2{
+  color: brown;
+  text-align: center;
+  font-size: 50px;
+  padding-top: 50px;
+  text-transform: uppercase;
+}
+
+.main-info-about p{
+  color: #53504F;
+  font-size: 30px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+
+/********** Page Formations ********/ 
+
+.main-info-formations h2{
+  color: brown;
+  text-align: center;
+  font-size: 50px;
+  padding-top: 50px;
+  text-transform: uppercase;
+}
+
+/********** Page Contact *********/ 
+
+.main-info-contact h2{
+  color: brown;
+  text-align: center;
+  font-size: 50px;
+  padding-top: 50px;
+  text-transform: uppercase;
+}
 
 /********** Typed Text ****************/
 
@@ -77,8 +175,12 @@ nav ul li {
 
 .tsparticles-canvas-el {
   position: absolute;
+  display: block;
   height: 100vh;
   width: 100vw;
+  /*  le z-order détermine l'ordre 
+  des différentes couches que 
+  formeront les éléments*/
   z-index: 1;
 }
 
@@ -89,4 +191,40 @@ nav ul li {
   color: brown;
   text-align: center;
   padding-top: 50px;
+}
+
+/********* Contact*******************/ 
+
+.content-contact{
+  color: white;
+  font-size : 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+
+.content-contact input{
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  width: auto;
+}
+
+.content-contact label{
+  padding-top: 5px;
+  color: grey;
+}
+
+
+.content-contact li{
+  list-style: none;
+  padding-top: 20px;
+}
+
+.main-info-contact p{
+  text-align: center;
+  font-size: 25px;
+  color: grey;
+  justify-content: center;
+  padding-top: 25px;
 }
