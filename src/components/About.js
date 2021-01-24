@@ -13,7 +13,7 @@ function About() {
                             <p>Je vous invite à visiter mon dépôt Git avec mes différents projets</p>
                         </div>
                         <div id="deux">
-                            <a href="https://github.com/geoffreyrobelot" id="git">Mon dépôt Git</a>
+                            <a href="https://github.com/geoffreyrobelot" id="git" target="_blank" rel="noreferrer">Mon dépôt Git</a>
                         </div>
                     </div>
                 </div>

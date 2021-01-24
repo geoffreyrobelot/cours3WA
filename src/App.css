@@ -212,6 +212,19 @@ a:hover{
 .typed-text {
   font-size: 2rem;
   color: black;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 30px;
+  padding-left: 15px;
+}
+
+.typed-text-2{
+  font-size: 2rem;
+  color: black;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 40px;
+  padding-left: 15px;
 }
 
 .tsparticles-canvas-el {
