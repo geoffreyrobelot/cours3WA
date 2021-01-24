@@ -37,15 +37,15 @@ class Contact extends React.Component {
         }
         event.preventDefault();
         /*
-        * Fonctionnalité qui permet de vérifier l'expression mail 
-        * Pas d'action pour le moment 
+        * Fonctionnalité qui permet de vérifier l'expression mail
+        * if (!this.state.email.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`/\{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)){
+        *    Affiche lorsque le mail entré n'est pas valide dans la console 
+        *    console.log("le mail n'est pas valide");
+        *    Affiche sur la page une alerte 
+        *    alert("Le mail saisi n'est pas valide");
+        * } 
         */ 
-        if (!this.state.email.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`/\{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)){
-            // Affiche lorsque le mail entré n'est pas valide dans la console 
-            console.log("le mail n'est pas valide");
-            // Affiche sur la page une alerte 
-            alert("Le mail saisi n'est pas valide");
-        } 
+        
         // Affiche les valeurs du formulaire dans la console    
         console.log(data);
 
@@ -62,8 +62,9 @@ class Contact extends React.Component {
                         <p>Pour toute information, n'hésitez pas à me contacter, je vous répondrai dans les meilleurs délais</p>
                         <div className="content-contact">
                             <form onSubmit={this.handleSubmit}>
-                                <li><label>
-                                    NOM :
+                                <li>
+                                    <label>
+                                        Nom :
                                 <input type="text" name="lastName" value={this.state.lastName} onChange={this.handleChange('lastName')} />
                                 <span id="misslastName"></span>
                                 </label>
@@ -77,7 +78,7 @@ class Contact extends React.Component {
                                 <li>
                                     <label>
                                         E-mail :
-                                <input type="text" name="email" value={this.state.email} onChange={this.handleChange('email')} />
+                                <input type="email" name="email" value={this.state.email} onChange={this.handleChange('email')} />
                                     </label>
                                 </li>
                                 <li>

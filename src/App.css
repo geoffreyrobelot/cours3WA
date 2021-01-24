@@ -147,6 +147,27 @@ a:hover{
   padding-top: 20px;
 }
 
+.content-about #un{
+  position: relative;
+  padding-top: 25px;
+  width: auto;
+}
+
+.content-about #deux #git{
+  color: var(--primary-white);
+  font-size: 25px;
+  display: block;
+  text-align: center;
+  padding-top: 25px;
+  width: auto;
+}
+
+.content-about #deux a:hover{
+  background-color: brown;
+  width: auto;
+}
+
+
 
 /********** Page Formations ********/ 
 
@@ -155,17 +176,35 @@ a:hover{
   text-align: center;
   font-size: 50px;
   padding-top: 50px;
+  padding-bottom: 20px;
   text-transform: uppercase;
 }
 
-/********** Page Contact *********/ 
-
-.main-info-contact h2{
-  color: brown;
+.main-info-formations h3{
+  color: var(--primary-white);
   text-align: center;
-  font-size: 50px;
-  padding-top: 50px;
-  text-transform: uppercase;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.content-formations{
+  color: white;
+  font-size : 20px;
+  display: block;
+  justify-content: center;
+  align-items: center;  
+}
+
+.content-formations li{
+  list-style: none;
+}
+
+.content-formations p{
+  text-align: center;
+  font-size: 25px;
+  color: grey;
+  justify-content: center;
+  padding-top: 5px;
 }
 
 /********** Typed Text ****************/
@@ -197,6 +236,14 @@ a:hover{
 
 /********* Contact*******************/ 
 
+.main-info-contact h2{
+  color: brown;
+  text-align: center;
+  font-size: 50px;
+  padding-top: 50px;
+  text-transform: uppercase;
+}
+
 .content-contact{
   color: white;
   font-size : 20px;
@@ -214,6 +261,7 @@ a:hover{
 
 .content-contact label{
   padding-top: 5px;
+  padding-bottom: 10px;
   color: grey;
 }
 
