@@ -52,10 +52,16 @@ class Contact extends React.Component {
     }
  
     render() {
-
+        // Déclaration des constantes 
         const titre = "Contact";
         const texte = "Pour toute information, vous pouvez compléter ce formulaire.";
         const texte1 = "Je vous répondrai dans les meilleurs délais.";
+
+        // Constantes du formulaire 
+        const nom = "Nom : ";
+        const prenom = "Prénom : "; 
+        const mail = "Email : ";
+        const motif = "Motif : ";
 
         return (
             <div>
@@ -66,28 +72,29 @@ class Contact extends React.Component {
                         <p>{texte1}</p>
                         <div className="content-contact">
                             <form onSubmit={this.handleSubmit}>
+                                
                                 <li>
                                     <label>
-                                        Nom :
+                                       {nom}
                                 <input type="text" name="lastName" value={this.state.lastName} onChange={this.handleChange('lastName')} />
                                 <span id="misslastName"></span>
                                 </label>
                                 </li>
                                 <li>
                                     <label>
-                                        Prénom :
+                                        {prenom}
                                 <input type="text" name="firstName" value={this.state.firstName} onChange={this.handleChange('firstName')}/>
                                     </label>
                                 </li>
                                 <li>
                                     <label>
-                                        E-mail :
+                                        {mail}
                                 <input type="email" name="email" value={this.state.email} onChange={this.handleChange('email')} />
                                     </label>
                                 </li>
                                 <li>
                                     <label>
-                                        Motif :
+                                        {motif}
                                 <input type="text" name="motif" value={this.state.motif} onChange={this.handleChange('motif')}/>
                                     </label>
                                 </li>
