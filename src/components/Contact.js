@@ -50,16 +50,20 @@ class Contact extends React.Component {
         console.log(data);
 
     }
-
-    
  
     render() {
+
+        const titre = "Contact";
+        const texte = "Pour toute information, vous pouvez compléter ce formulaire.";
+        const texte1 = "Je vous répondrai dans les meilleurs délais.";
+
         return (
             <div>
                 <div className="header-wraper" id="contact">
                     <div className="main-info-contact">
-                        <h2>Contact</h2>
-                        <p>Pour toute information, n'hésitez pas à me contacter, je vous répondrai dans les meilleurs délais</p>
+                        <h2>{titre}</h2>
+                        <p>{texte}</p>
+                        <p>{texte1}</p>
                         <div className="content-contact">
                             <form onSubmit={this.handleSubmit}>
                                 <li>

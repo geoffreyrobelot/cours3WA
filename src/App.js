@@ -2,14 +2,14 @@ import './App.css';
 import Home from './components/Home';
 import Navbar from './components/Navbar.js';
 import Header from './components/Header.js';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Particles from 'react-particles-js';
 import About from './components/About.js';
 import Formations from './components/Formations.js';
+import Competences from './components/Competences.js';
 import Contact from './components/Contact.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Particles from 'react-particles-js';
 import React from 'react';
 import ScrollToTop from "react-scroll-to-top";
-
 // import du routeur --> HashRouter
 // import de Route --> itinéraire vers 
 // import de Link --> composant qui génère une balise <a href="..."
@@ -54,12 +54,14 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
         <Route path="/formations" component={Formations} />
+        <Route path="/competences" component={Competences}/>
         <Route path="/contact" component={Contact} />
       </Switch>
 
       <Header/>
       <About/>
       <Formations/>
+      <Competences/>
       <Contact/>
 
       </BrowserRouter>

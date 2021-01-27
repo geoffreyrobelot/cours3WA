@@ -1,30 +1,49 @@
 import React from 'react';
+import cv from '../Miniature_CV_3WA.png';
+import cv_grand from '../Complet_CV_3WA.png';
+import git from '../git.jpg';
 
-function About() {
-    return (
-        <div>
-            <div className="header-wraper" id="about">
-                <div className="main-info-about">
-                    <h2>A propos de moi</h2>
-                    <div className="content-about">
-                        
-                        <div id="un">
-                            <p>Passionné par les nouvelles technologies et le développement informatique</p>
-                            <p>Je vous invite à visiter mon dépôt Git avec mes différents projets</p>
-                        </div>
-                        <div id="deux">
-                            <a href="https://github.com/geoffreyrobelot" id="git" target="_blank" rel="noreferrer">Mon dépôt Git</a>
+class About extends React.Component {
+
+    render(){
+
+        const titre= "A propos de moi";
+        const texte= "Passionné par les nouvelles technologies et le développement informatique";
+        const texte1= "Je vous invite à visiter mon dépôt Git avec mes différents projets et prendre connaissance de mon CV";
+
+        return (
+            <div>
+                <div className="header-wraper" id="about">
+                    <div className="main-info-about">
+                        <h2>{titre}</h2>
+                        <div className="content-about">
+                            <div id="un">
+                                <p>{texte}</p>
+                                <p>{texte1}</p>
+                            </div>
+
+                            <div className="git-cv">
+                                <a href="https://github.com/geoffreyrobelot" title="Lien vers mon dépôt git">
+                                    <img alt="Vignette de mon dépôt git"
+                                        src={git}
+                                        width="18%"
+                                        height="8%" />
+                                </a>
+
+                                <a href={cv_grand} title="Lien vers la version originale de mon CV">
+                                    <img alt="Vignette de mon CV"
+                                        src={cv}
+                                        width="15%"
+                                        height="8%" />
+                                </a>
+                                
+                            </div>
                         </div>
                     </div>
                 </div>
-
             </div>
-
-
-
-        </div>
-
-    )
+        )
+    }
 }
 
 export default About

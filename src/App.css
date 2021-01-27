@@ -2,8 +2,6 @@
   --primary-white: #fff;
 }
 
-
-
 nav {
   z-index: 2;
   opacity: 1;
@@ -88,7 +86,7 @@ a:hover{
 
 .header-wraper{
   position: relative;
-  background: url("fond1.png") no-repeat;
+  background-color: black;
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -110,7 +108,7 @@ a:hover{
 .main-info h2{
   color:brown;
   margin-top: 150px;
-  font-size: 40px;
+  font-size: 50px;
 }
 
 .main-info .typed-text{
@@ -141,10 +139,10 @@ a:hover{
 }
 
 .main-info-about p{
-  color: #53504F;
   font-size: 30px;
   text-align: center;
   padding-top: 20px;
+  color: var(--primary-white);
 }
 
 .content-about #un{
@@ -153,20 +151,19 @@ a:hover{
   width: auto;
 }
 
-.content-about #deux #git{
-  color: var(--primary-white);
-  font-size: 25px;
-  display: block;
+.git-cv{
+  width: 100%;
+  height: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 15px;
   text-align: center;
-  padding-top: 25px;
-  width: auto;
 }
 
-.content-about #deux a:hover{
-  background-color: brown;
-  width: auto;
+.git-cv img{
+  border: 0px none #000;
+  margin: 10px;
 }
-
 
 
 /********** Page Formations ********/ 
@@ -206,6 +203,92 @@ a:hover{
   justify-content: center;
   padding-top: 5px;
 }
+
+/********** Compétences ***************/
+
+.main-info-competences h2{
+  color: brown;
+  text-align: center;
+  font-size: 50px;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.main-info-competences{
+  width: 500px;
+  height: 300px;
+  margin: auto;
+}
+
+.main-info-competences h3{
+  text-align: center;
+  color: var(--primary-white);
+  padding-bottom: 5px;
+}
+
+.bar {
+  /* font-size: 10px */
+  width: 30em;
+  height: 2em;
+  border-radius: 0.5em;
+  /* Le parent doit être en position : "relative" pour que les enfants soient en position: "absolute" */
+  position: relative;
+  background: var(--primary-white);
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1);
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.bar .percentage {
+  position: relative;
+  font-size: 1em;
+  background: brown;
+  height: 2em;
+  border-radius: 0.5em;
+}
+
+.has-tip:before,
+  .has-tip:after {
+    content: "";
+    position: absolute;
+    opacity: 0;
+  }
+
+.has-tip:before {
+    bottom: -10px;
+    right: -5px;
+    border: 5px solid;
+    border-color: transparent transparent tomato transparent;
+    transition: opacity 0.1s;
+  }
+
+  .has-tip:after {
+    content: attr(data-perc);
+    bottom: 0;
+    right: 0;
+    white-space: nowrap;
+    padding: 0.6em 1em;
+    border-radius: 2em;
+    line-height: 1;
+    color: #fff;
+    background: tomato;
+    transform: translateX(50%) translateY(100%);
+    transition: transform 0.2s, opacity 0.1s;
+  }
+
+  .has-tip:hover:before,
+  .has-tip.active:before {
+    opacity: 1;
+  }
+
+  .has-tip:hover:after,
+  .has-tip.active:after {
+    opacity: 1;
+    transform: translateX(50%) translateY(100%) translateY(10px);
+  }
+
+
 
 /********** Typed Text ****************/
 

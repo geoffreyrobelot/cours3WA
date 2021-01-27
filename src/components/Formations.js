@@ -1,55 +1,63 @@
 import React from 'react'
 
-function Formations() {
-    return (
+class Formations extends React.Component {
 
-        <div>
-            <div className="header-wraper" id="formations">
-                <div className="main-info-formations">
-                    <h2>Formations</h2>
-                    <div className="content-formations">
-                        <li>
-                            <h3>Développeur Web</h3>
+    render() {
+
+        const devWeb = "Développeur Web";
+        const devApp = "Concepteur Développeur d'Applications";
+        const bts= "BTS Diététique";
+        const dut= "DUT MMI (Métiers du multimédia et de l'Internet";
+        
+        return (
+            <div>
+                <div className="header-wraper" id="formations">
+                    <div className="main-info-formations">
+                        <h2>Mes formations</h2>
+                        <div className="content-formations">
                             <li>
-                                <p>3W Academy</p>
+                                <h3>{devWeb}</h3>
                                 <li>
-                                    <p>Depuis novembre 2020</p>
+                                    <p>3W Academy</p>
+                                    <li>
+                                        <p>Depuis novembre 2020</p>
+                                    </li>
                                 </li>
                             </li>
-                        </li>
-                        <li>
-                            <h3>Concepteur Développeur d'Applications</h3>
                             <li>
-                                <p>Greta des Yvelines</p>
+                                <h3>{devApp}</h3>
                                 <li>
-                                    <p>2019 - 2020</p>
+                                    <p>Greta des Yvelines</p>
+                                    <li>
+                                        <p>2019 - 2020</p>
+                                    </li>
                                 </li>
                             </li>
-                        </li>
-                        <li>
-                            <h3>BTS Diététique</h3>
                             <li>
-                                <p>CNED</p>
+                                <h3>{bts}</h3>
                                 <li>
-                                    <p>2014 - 2016</p>
+                                    <p>CNED</p>
+                                    <li>
+                                        <p>2014 - 2016</p>
+                                    </li>
                                 </li>
                             </li>
-                        </li>
-                        <li>
-                            <h3>DUT MMI - Métiers du Multimédia et de l'Internet</h3>
                             <li>
-                                <p>Université de Vélizy</p>
+                                <h3>{dut}</h3>
                                 <li>
-                                    <p>2013 - 2014</p>
+                                    <p>Université de Vélizy</p>
+                                    <li>
+                                        <p>2013 - 2014</p>
+                                    </li>
                                 </li>
                             </li>
-                        </li>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-    )
+        )
+    }
 }
 
 export default Formations
