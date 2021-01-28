@@ -12,7 +12,7 @@ function Footer() {
                             <ul className="list">
                                 <li>Développeur Web</li>
                                 <li>Développeur d'Applications</li>
-                                <li>A venir</li>
+                                <li>...</li>
                             </ul>
                         </div>
                         {/* column 2 */}
