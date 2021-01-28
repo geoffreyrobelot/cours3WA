@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../geo1.png';
+import logo from '../geo2.jpg';
 import {Link} from 'react-scroll';
 
 const Navbar = () => {
@@ -26,6 +26,9 @@ const Navbar = () => {
               </li>
               <li className="nav-item">
               <li><Link to="contact" className="nav-link" smooth={true} duration={1000}>Contact</Link></li>
+              </li>
+              <li className="nav-item">
+              <li><Link to="footer" className="nav-link" smooth={true} duration={1000}>Infos</Link></li>
               </li>
             </ul>
           </div>

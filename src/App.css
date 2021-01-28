@@ -11,7 +11,7 @@ nav {
 
 .logo{
   width: 200px;
-  height: 150px;
+  height: 175px;
   padding-left: 50px;
 }
 
@@ -26,7 +26,7 @@ nav a.nav-link{
 
 nav ul li {
   text-transform: uppercase;
-  margin-left: 40px;
+  margin-left: 25px;
   font-size: 20px;
   justify-content: center;
 
@@ -373,4 +373,21 @@ a:hover{
   color: grey;
   justify-content: center;
   padding-top: 25px;
+}
+
+/********* Footer **********/ 
+
+.main-footer{
+  color: var(--primary-white);
+  background-color: #343A40;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  padding-top: 3em;
+  text-align: center;
+}
+
+
+.col .list {
+  list-style: none;
 }

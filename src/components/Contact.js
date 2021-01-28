@@ -1,5 +1,9 @@
 import React from 'react';
 
+// Constantes d'erreur 
+const ERROR_NOM = "Le nom saisi n'est pas valide";
+const PAS_DERREUR = "";
+
 class Contact extends React.Component {
 
     // Constructeur de la classe 
@@ -10,11 +14,14 @@ class Contact extends React.Component {
             firstName: "",
             email: "",
             motif: "",
+            errorMessage: "",
         }
         // Déclaration des fonctions de la classe dans le constructeur 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
+
+    
 
    handleChange(event){
        return function(e){
@@ -50,6 +57,31 @@ class Contact extends React.Component {
         console.log(data);
 
     }
+
+    componentDidMount(){
+        if (this.state.lastName.length >0 && this.state.lastName.length <=1){
+            this.setState({
+                errorMessage: ERROR_NOM,
+            })
+        } else if(this.state.lastName.length >1) {
+            this.setState({
+                errorMessage: PAS_DERREUR,
+            })
+        } 
+    }
+
+    componentDidUpdate(previousProps, previousState){
+        if ((this.state.lastName.length <=1 && this.state.lastName.length >0) && this.state.errorMessage !== ERROR_NOM){
+            this.setState({
+                errorMessage: ERROR_NOM,
+            })
+        } else if(this.state.lastName.length >1 && this.state.errorMessage !==PAS_DERREUR){
+            this.setState({
+                errorMessage: PAS_DERREUR,
+            })
+        } 
+        
+    }
  
     render() {
         // Déclaration des constantes 
@@ -63,6 +95,8 @@ class Contact extends React.Component {
         const mail = "Email : ";
         const motif = "Motif : ";
 
+        
+        
         return (
             <div>
                 <div className="header-wraper" id="contact">
@@ -72,13 +106,14 @@ class Contact extends React.Component {
                         <p>{texte1}</p>
                         <div className="content-contact">
                             <form onSubmit={this.handleSubmit}>
-                                
+
                                 <li>
                                     <label>
                                        {nom}
                                 <input type="text" name="lastName" value={this.state.lastName} onChange={this.handleChange('lastName')} />
                                 <span id="misslastName"></span>
                                 </label>
+                                <h5 style={{color:"red"}}>{this.state.errorMessage}</h5>
                                 </li>
                                 <li>
                                     <label>
