@@ -1,5 +1,6 @@
 import React from 'react'
 import logo from '../geo2.jpg';
+import geo from '../geo_reseau.jpg';
 import {Link} from 'react-scroll';
 
 const Navbar = () => {
@@ -10,7 +11,7 @@ const Navbar = () => {
 
           {/* column 1 */}
           <div className="col1">
-            <a className="navbar-brand" href="/#"><img className="logo" src={logo} alt="logo" /></a>
+            <a className="navbar-brand" href={geo} title="Lien vers ma photo en version originale"><img className="logo" src={logo} alt="logo" /></a>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
             </button>
