@@ -95,8 +95,6 @@ class Contact extends React.Component {
         const mail = "Email : ";
         const motif = "Motif : ";
 
-        
-        
         return (
             <div>
                 <div className="header-wraper" id="contact">
