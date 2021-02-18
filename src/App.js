@@ -9,7 +9,7 @@ import Contact from './components/Contact.js';
 import Footer from './components/Footer.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Particles from 'react-particles-js';
-import React from 'react';
+import React, {useState} from 'react';
 import ScrollToTop from "react-scroll-to-top";
 // import du routeur --> HashRouter
 // import de Route --> itinéraire vers 
@@ -19,8 +19,10 @@ import {Route, BrowserRouter, Switch} from 'react-router-dom';
 
 // Composant principal de l'application 
 function App() {
+  
   return (
     <>
+    
     <BrowserRouter>
       <Navbar/>
       <Particles
@@ -62,13 +64,17 @@ function App() {
 
       <Header/>
       <About/>
+      
       <Formations/>
       <Competences/>
       <Contact/>
       <Footer/>
 
       </BrowserRouter>
+      
+    
     </>
+    
   )
 }
 
